@@ -2,7 +2,7 @@
   <div class="row">
       <div class="col-md-2 left-bar">
             <div class="list-group">
-                <router-link to="/home" class="list-group-item active">首页</router-link>
+                <router-link to="/home" class="list-group-item">首页</router-link>
                 <router-link to="/search" class="list-group-item">搜索</router-link>
                 <router-link to="/personal" class="list-group-item">个人中心</router-link>
             </div>

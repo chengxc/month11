@@ -15,5 +15,6 @@ export default new VueRouter({
         { path: "/home", component: Home },
         { path: "/personal", component: Personal },
         { path: "/search", component: Search }
-    ]
+    ],
+    linkActiveClass: "active"
 })
