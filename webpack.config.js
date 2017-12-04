@@ -27,6 +27,9 @@ module.exports = {
         }, {
             test: /\.vue$/,
             use: ["vue-loader"]
+        }, {
+            test: /\.(ttf|woff)$/,
+            use: ["file-loader"]
         }]
     }
 }
