@@ -22,7 +22,16 @@ import App from "./component/App.vue"
 //导入路由配置
 import router from "./router.js"
 
+/**
+ * 注册vue全局错误事件处理函数，会在vue程序发生未捕获的错误时调用
+ * @param info 是 Vue 特定的错误信息，比如错误所在的生命周期钩子
+ */
+Vue.config.errorHandler = function(err, vm, info) {
+    console.log(info);
+}
 
+
+//创建全局的store对象
 const store = new Vuex.Store({
     state: {
         doubanUrl: "https://api.douban.com/v2"
@@ -39,4 +48,4 @@ var vm = new Vue({
     render(c) {
         return c(App);
     }
-});
+})

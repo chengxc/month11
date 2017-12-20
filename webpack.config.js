@@ -26,7 +26,16 @@ module.exports = {
             use: ["style-loader", "css-loader", "less-loader"]
         }, {
             test: /\.vue$/,
-            use: ["vue-loader"]
+            loader: "vue-loader",
+            options: {
+                //解决一个坑，如：可以直接将img标签中的src属性的图片编译出来
+                transformToRequire: {
+                    video: 'src',
+                    source: 'src',
+                    img: 'src',
+                    image: 'xlink:href'
+                }
+            }
         }, {
             test: /\.(ttf|woff)$/,
             use: ["file-loader"]
